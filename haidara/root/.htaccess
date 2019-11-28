@@ -1,0 +1,6 @@
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile "C:\wamp\www\blog\haidara\root\.htpasswd"
+Require valid-user
+
+

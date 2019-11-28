@@ -1,0 +1,17 @@
+
+#Options -MultiViews
+RewriteEngine On
+
+Options -Indexes
+
+#RewriteBase /blog/haidara/public
+#on   veut pas un dossier
+#on   veut pas un fichier
+#on   veut pas un lien
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+#QSA : query string append Et L : last
